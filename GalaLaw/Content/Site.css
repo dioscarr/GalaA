@@ -493,6 +493,22 @@ footer .footer_text_muted {
  .navbar-toggle .icon-bar {
      width: 30px;
  }
+ .homepage_adverts {
+     width:30%;
+     background: #EFF2F5;
+     float: left;
+     margin: 2%;
+     padding: 3%;
+ }
+ .homepage_adverts>img {
+    min-height: 150px;
+    min-width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle
+ }
 /*mail styles end*/
 
 /*about*/
