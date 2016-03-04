@@ -48,18 +48,18 @@
                 {@Model.contact.Web}</a></span></p>
 
             </div>
-            <div class='col-xs-4 membership mobile_content_global'>
+            <div class='col-sm-4 col-xs-12 membership'>
                 <div class="news_block">
                     <div class="stuffing_news about_stuffing_news">
                         <div class="home_member about_home_member">
                             <h1 class="member_title about_member_title text_uppercase">join gala</h1>
                             <div class="member_info about_member_info">
                                 <p>For information about joining GALA as a law firm member, see Membership.</p>
-                                <input class="text_uppercase" type="submit" value="MEMBERSHIP">
+                                <input class="text_uppercase" type="submit" value="MEMBERSHIP" onclick="window.location.href ='@Url.Action("Membership","Membership")';">
                             </div>
                             <div class="member_info about_member_info">
                                 <p>For information about joining GALA as a corporate member, see Associate Membership.</p>
-                                <input class="text_uppercase" type="submit" value="ASSOCIATE MEMBERSHIP">
+                                <input class="text_uppercase" type="submit" value="ASSOCIATE MEMBERSHIP" onclick="window.location.href ='@Url.Action("MembershipAssociate","MembershipAssociate")';">
                             </div>
                         </div>
                     </div>

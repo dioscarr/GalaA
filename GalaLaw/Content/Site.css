@@ -807,6 +807,9 @@ table#t01 tr:hover {
 .publication_member {
     overflow: hidden;
 }
+.content_global>.publication_padding {
+    padding: 0;
+}
 /*publication end*/
 
 .news_block {

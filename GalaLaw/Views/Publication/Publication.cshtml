@@ -54,7 +54,7 @@
                 <br />
                 <div class="bio_top_title">
                     <div class="pull-left">
-                        <h1 class="content_title_news"><span class="gazette_data text_uppercase">04.21.2014 </span>GALA @Model.LastGazetteVolume.GazetteVolume</h1>
+                        <h1 class="content_title_news"><span class="gazette_data text_uppercase GazetteDate"> </span> GALA @Model.LastGazetteVolume.GazetteVolume</h1>
                     </div>
                     <div class="pull-right print_share">
                         <h4 class="events_archive text_uppercase"><a href="~/Publication/GazetteArchive/@Model.LastGazetteVolume.Id">< @Model.LastGazetteVolume.GazetteVolume></a></h4>
@@ -64,12 +64,12 @@
                 @foreach (Gazette article in @Model.GazetteArticles)
                 {
                     <h4 class="gazette_country">@if (@article.Firm != null) { @article.Firm.Country}</h4>
-                    <p><span class="text_uppercase"><a href="~/Publication/GazetteArticle/@article.Id">@article.header</a></span></p>
+                    <p class="publication_padding"><span class="text_uppercase"><a href="~/Publication/GazetteArticle/@article.Id">@article.header</a></span></p>
                     <p>
                     @{var content = @Html.Raw(@article.Content); }
                        @if(@content !=null ) { }
                         @Model.Truncate(content.ToString(), 225, "...", true)  
-                        content 
+                       
                     </p>
                     <br>
                 }
@@ -91,3 +91,15 @@
     </div>
 </section>
 
+@section scripts{
+    
+<script src="~/Scripts/moment.min.js"></script>
+    <script>
+        debugger
+
+
+        var day = moment('@Model.LastGazetteVolume.PublishedDate').format('MM.DD.YYYY');
+        $('.GazetteDate').text(day);
+    </script>
+    
+    }
