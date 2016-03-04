@@ -54,8 +54,8 @@
                     <h4 class="bio_contact_info_title">@Model.GazetteArticle.Firm.FirmName</h4>
                     <p>@Model.GazetteArticle.Firm.Address</p>
                     <p>@Model.GazetteArticle.Firm.City, @Model.GazetteArticle.Firm.Country</p>
-                    <p>Tel:     <a href="">@Model.GazetteArticle.Firm.Tel</a></p>
-                    <p>Web:   <a href="">@Model.GazetteArticle.Firm.web</a></p>
+                    <p>Tel:     <span>@Model.GazetteArticle.Firm.Tel</span></p>
+                    <p>Web:   <a href="http://@Model.GazetteArticle.Firm.web" target="_blank">@Model.GazetteArticle.Firm.web</a></p>
                 </div>
                 @foreach (var item in @Model.GazetteArticle.GMLink)
                 {
@@ -67,7 +67,7 @@
                             </div>
                             <div class="pull-right about_member_person_info">
                                 <h3>@item.Team.FName @item.Team.LName</h3>
-                                <span><a class="" href="#">@item.Team.Email</a></span>
+                                <span><a class="" href="mailto:@item.Team.Email">@item.Team.Email</a></span>
                             </div>
                         </div>
                     </div>
