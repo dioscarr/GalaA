@@ -121,6 +121,8 @@ img {
 .user_data {
     background-color: #004379;
     padding: 0.2%;
+    width: 36%;
+    margin-left: 64%;
 }
 .user_icon, .user_login {
     padding: 0 6% 0;
@@ -939,6 +941,10 @@ table#t01 tr:hover {
     .member_title_news {
        font-size: 1.7em;
    }    
+    .user_data {
+        width: 47%;
+        margin-left: 53%;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1096,6 +1102,13 @@ table#t01 tr:hover {
         width: 100%;
     }
     
+}
+
+@media (max-width: 690px) {
+    .user_data {
+        width: 100%;
+        margin-left: 0;
+    }
 }
 
 @media (max-width: 660px) {
