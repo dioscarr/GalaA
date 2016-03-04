@@ -215,6 +215,7 @@ img {
 }
 .dropdown-menu > li > a {
     overflow: hidden;
+    text-transform: capitalize;
 }
 /*Slider for text*/
 .carousel-inner .item {
