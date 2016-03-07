@@ -52,7 +52,6 @@
                 <span class="Executive_Committee membershipQuestion"><a class="joinLink" herf="#">Please click here to complete the Application Form.</a></span>
                 <p>* GALA does not practice law. GALA acts only as a communication channel. Responsibility for any legal advice rests solely with the individual law firms.</p>
             </div>
-
             <div class='col-sm-4 col-xs-12 membership'>
                 <div class="news_block">
                     <div class="stuffing_news about_stuffing_news">
@@ -60,11 +59,11 @@
                             <h1 class="member_title about_member_title text_uppercase">join gala</h1>
                             <div class="member_info about_member_info">
                                 <p>For information about joining GALA as a law firm member, see Membership.</p>
-                                <input class="text_uppercase" type="submit" value="MEMBERSHIP">
+                                <input class="text_uppercase" type="submit" value="MEMBERSHIP" onclick="window.location.href ='@Url.Action("Membership","Membership")';">
                             </div>
                             <div class="member_info about_member_info">
                                 <p>For information about joining GALA as a corporate member, see Associate Membership.</p>
-                                <input class="text_uppercase" type="submit" value="ASSOCIATE MEMBERSHIP">
+                                <input class="text_uppercase" type="submit" value="ASSOCIATE MEMBERSHIP" onclick="window.location.href ='@Url.Action("MembershipAssociate","MembershipAssociate")';">
                             </div>
                         </div>
                     </div>

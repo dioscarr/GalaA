@@ -27,7 +27,7 @@ namespace GalaLaw.Models
             GazetteArticles = db.Gazette.ToList();
             LastGazetteVolume = ManageGazetteVolumes.GetAllGazetteVolumes().OrderByDescending(c => c.PublishedDate).FirstOrDefault();
             //=====================================================================================
-            mymodel = db.GazetteVolumes
+            mymodel = db.GazetteVolumes.OrderByDescending(c=>c.PublishedDate)
                 .Select(c => new VolumesModel
                                             {
                                             id = c.Id,
