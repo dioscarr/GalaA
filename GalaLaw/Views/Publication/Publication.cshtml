@@ -61,18 +61,21 @@
                     </div>
                 </div>
                 <hr>
-                @foreach (Gazette article in @Model.GazetteArticles)
-                {
-                    <h4 class="gazette_country">@if (@article.Firm != null) { @article.Firm.Country}</h4>
-                    <p class="publication_padding"><span class="text_uppercase"><a href="~/Publication/GazetteArticle/@article.Id">@article.header</a></span></p>
-                    <p>
-                    @{var content = @Html.Raw(@article.Content); }
-                       @if(@content !=null ) { }
-                        @Model.Truncate(content.ToString(), 225, "...", true)  
-                       
-                    </p>
-                    <br>
-                }
+                <div class="events_table">
+                    @foreach (Gazette article in @Model.GazetteArticles)
+                    {
+                        <h4 class="gazette_country">@if (@article.Firm != null)
+                        { @article.Firm.Country}</h4>
+                        <p class="publication_padding"><span class="text_uppercase"><a href="~/Publication/GazetteArticle/@article.Id">@article.header</a></span></p>
+                        <p>
+                            @{var content = @Html.Raw(@article.Content); }
+                            @if (@content != null) { }
+                            @Model.Truncate(content.ToString(), 225, "...", true)
+
+                        </p>
+                        <br>
+                                }
+                </div>
             </div>
             <div class='col-xs-4 membership mobile_content_global'>
                 <div class="news_block events_block">
