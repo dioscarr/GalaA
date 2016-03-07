@@ -392,7 +392,7 @@ img {
     width: 20%;
 }
 .home_news_content {
-    width: 75%;
+    width: 100%;
     text-align: left;
 }
 .home_news_content>.home_news_content_p {
