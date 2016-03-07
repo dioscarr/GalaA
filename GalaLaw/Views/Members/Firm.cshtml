@@ -88,7 +88,7 @@
 
                 </div>
 
-                <div class="bio_member_content_info">
+                <div class="bio_member_content_info con">
                    
                     @Html.Raw(@Model.Firm.AboutContent)
                     <hr>
@@ -101,7 +101,7 @@
                             var Contentnews = Html.Raw(@news.Content);
                             if (Contentnews.ToHtmlString().EndsWith("</a>"))
                             {
-                                <p class="events_text_content">
+                                <p class="events_text_content nopaddding">
                                     <span class="event_data pull-left">@String.Format("{0:MMM d, yyyy}", @news.Published)</span>
                                     <br />
                                     <span class="events_content pull-left">@Contentnews</span>
@@ -110,20 +110,23 @@
                             }
                             else
                             {
-                                <p class="events_text_content">
-                                    <a href="~/Events/Article/@news.id">
+                                <p class="events_text_content nopaddding">
+                               
                                         <span class="event_data pull-left"> @String.Format("{0:MMM d, yyyy}", @news.Published)</span>
                                         <br />
-                                        <span class="events_content pull-left">@Html.Raw(@news.Heading)</span></a>
+                                    <a href="~/Events/Article/@news.id">
+                                        <span class="events_content pull-left">@Html.Raw(@news.Heading)</span>
+                                    </a>
                                 </p>
                                 <br />
                             }
                         }
                         else {
-                            <p class="events_text_content">
-                                <a href="~/Events/Article/@news.id">
+                            <p class="events_text_content nopaddding">
+                              
                                     <span class="event_data pull-left"> @String.Format("{0:MMM d, yyyy}", @news.Published)</span>
                                     <br />
+                                  <a href="~/Events/Article/@news.id">
                                     <span class="events_content pull-left">@Html.Raw(@news.Heading)</span>
                                 </a>
                             </p>
@@ -151,7 +154,7 @@
                             @{var content = @Html.Raw(@article.Content); }
                             @if (@content != null) { }
                             @Model.Truncate(content.ToString(), 225, "...", true)
-                            content
+                           
                         </p>
             <br>
                         }
@@ -171,20 +174,22 @@
                             var Contentnews = Html.Raw(@news.Content);
                             if (Contentnews.ToHtmlString().EndsWith("</a>"))
                             {
-                                <p class="events_text_content">
+                                <p class="events_text_content nopaddding">
                                     <span class="event_data pull-left">@String.Format("{0:MMM d, yyyy}", @news.Published)</span><span class="events_content pull-right">@Contentnews</span>
                                 </p>
                             }
                             else
                             {
-                                <p class="events_text_content">
-                                    <a href="~/Events/Article/@news.id"><span class="event_data pull-left"> @String.Format("{0:MMM d, yyyy}", @news.Published)</span><span class="events_content pull-right">@Html.Raw(@news.Heading)</span></a>
+                                <p class="events_text_content nopaddding">
+                                  <span class="event_data pull-left"> @String.Format("{0:MMM d, yyyy}", @news.Published)</span>
+                                      <a href="~/Events/Article/@news.id">
+                                    <span class="events_content pull-right">@Html.Raw(@news.Heading)</span></a>
                                 </p>
                             }
                         }
                         else {
-                            <p class="events_text_content">
-                                <a href="~/Events/Article/@news.id"><span class="event_data pull-left"> @String.Format("{0:MMM d, yyyy}", @news.Published)</span><span class="events_content pull-right">@Html.Raw(@news.Heading)</span></a>
+                            <p class="events_text_content nopaddding">
+                             <span class="event_data pull-left"> @String.Format("{0:MMM d, yyyy}", @news.Published)</span><a href="~/Events/Article/@news.id"><span class="events_content pull-right">@Html.Raw(@news.Heading)</span></a>
                             </p>
 
                         }

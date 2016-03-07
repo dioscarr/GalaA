@@ -16,6 +16,11 @@
 .outline {
 outline:1px solid red;
 }
+
+
+.nopaddding {
+    padding:0px !important;
+}
 html{
     width: 100%; 
 }

@@ -51,7 +51,9 @@
                     <p data-bind="html:Content" class="limitchr"></p>
                     <br>
                 </div>
-              
+              <div class="col-md-12 text-center" id="loading"><!-- MDL Spinner Component -->
+                    <div class="mdl-spinner mdl-js-spinner is-active" ></div></div>
+               
             </div>
             <div class='col-xs-4 membership mobile_content_global'>
                 <div class="news_block events_block">
@@ -72,10 +74,27 @@
 
 @section scripts{
 
+
+<link href="~/mdl/material.css" rel="stylesheet" />
+<script src="~/mdl/material.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
  <script src="~/Scripts/knockout-3.4.0.js"></script>   
 <script src="~/Scripts/knockout.mapping-latest.js"></script>
 <script src="~/Scripts/moment.min.js"></script>
+
+
     <script type="text/javascript">
+
+        $(document).ajaxStart(function () {
+            $("#loading").show();
+        });
+
+        $(document).ajaxStop(function () {
+            $("#loading").hide();
+        });
+
         $(function () {
 
             //ko handler
@@ -106,7 +125,7 @@
 
             vm = function () {
                 var self = this;
-                self.mainArray = ko.observableArray([{ id: 1, name: '', PublishedDate:'', countries: [{ id: 0, Header: "", cname: "", Content: "" }] }]);
+                self.mainArray = ko.observableArray([{ id: 1, name: '', PublishedDate:'1/1/1900', countries: [{ id: 0, Header: "", cname: "", Content: "" }] }]);
                 self.GazetteDate = ko.observable();
                 self.updateDate = function (date)
                 {

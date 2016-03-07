@@ -54,8 +54,9 @@
                             else
                             {
                                 <p class="events_text_content">
-                                    <a href="~/Events/Article/@news.id">
+                                  
                                         <span class="event_data pull-left"> @String.Format("{0:MMM d, yyyy}", @news.Published)</span>
+                                    <a href="~/Events/Article/@news.id">
                                         <span class="events_content pull-right">@Html.Raw(@news.Heading)</span>
                                     </a>
                                 </p>
@@ -63,8 +64,9 @@
                         }
                         else {
                             <p class="events_text_content">
-                                <a href="~/Events/Article/@news.id">
+                                
                                     <span class="event_data pull-left"> @String.Format("{0:MMM d, yyyy}", @news.Published)</span>
+                                <a href="~/Events/Article/@news.id">
                                     <span class="events_content pull-right">@Html.Raw(@news.Heading)</span>
                                 </a>
                             </p>

@@ -8,7 +8,7 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-                <h2 class="about_title text_uppercase">Event Article</h2>
+                <h2 class="about_title text_uppercase">Article</h2>
             </div>
         </div>
     </div>
@@ -22,7 +22,7 @@
                     <li><a href="~/Home">Home</a></li>
                     <li><a href="~/events/EventList">Events</a></li>
                     
-                    <li class="active">Event Article</li>
+                    <li class="active">Article</li>
                 </ol>
             </div>
         </div>
@@ -30,7 +30,7 @@
             <div class="col-xs-9 content_global mobile_content_global">
                 <div class="bio_top_title">
                     <div class="pull-left">
-                        <h1 class="content_title_news">@Model.Events.Heading</h1>
+                        <h1 class="content_title_news">@Html.Raw(@Model.Events.Heading)</h1>
                     </div>
                     <div class="pull-right print_share">
                         <a href="javascript:window.print();"><img src="~/Images/print.png" alt="Print"></a>
@@ -48,27 +48,35 @@
                 </div>
             </div>
             <div class="col-xs-3 mobile_content_global">
-               
+               @if (@Model.Events.Firm != null)
+               {
                 <div class="bio_contact_info">
                  
                     <p></p>
                     <p>@Model.Events.Firm.FirmName</p>
                     <p>@Model.Events.Firm.Address</p>
                     <p>@Model.Events.Firm.City, @Model.Events.Firm.State @Model.Events.Firm.Country</p>
-                    <p>Tel:     @Model.Events.Firm.Tel</p>
-                    <p>Web:   <a href="mailto:@Model.Events.Firm.web">@Model.Events.Firm.web</a></p>
+                    <p>Tel:     @Model.Events.Firm.Tel</p>                   
+                        <p>Web:   <a href="mailto:@Model.Events.Firm.web">@Model.Events.Firm.web</a></p>
+                   
+                    
                 </div>
-                <div class="about_member_block">
-                    <div class="about_member_person">
-                        <div class="pull-left about_member_person_img">
-                            <img src="~/Images/@Model.Events.Team.Picture" alt="">
-                        </div>
-                        <div class="pull-right about_member_person_info">
-                            <h3>@Model.Events.Team.FName @Model.Events.Team.LName</h3>
-                            <span><a class="mailto:@Model.Events.Team.Email" href="#">@Model.Events.Team.Email</a></span>
+               }
+                @if (@Model.Events.Team != null)
+                {
+                    <div class="about_member_block">
+                        <div class="about_member_person">
+                            <div class="pull-left about_member_person_img">
+                                <img src="~/Images/@Model.Events.Team.Picture" alt="">
+                            </div>
+                            <div class="pull-right about_member_person_info">
+                                <h3>@Model.Events.Team.FName @Model.Events.Team.LName</h3>
+                                <span><a class="mailto:@Model.Events.Team.Email" href="#">@Model.Events.Team.Email</a></span>
+                            </div>
                         </div>
                     </div>
-                </div>
+                }
+             
             </div>
         </div>
     </div>
