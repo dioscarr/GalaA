@@ -125,12 +125,13 @@ img {
 }
 .user_data {
     background-color: #004379;
-    padding: 0.2%;
-    width: 36%;
-    margin-left: 64%;
+    padding: 0 1%;
+    width: auto;
+    float: right;
+        overflow: hidden;
 }
 .user_icon, .user_login {
-    padding: 0 6% 0;
+    padding: 0 0% 0;
 }
 .user_icon {
     border-right: 2px solid #326893;
@@ -679,6 +680,7 @@ footer .footer_text_muted {
 }
 .events_table { 
     padding-bottom: 5%;
+    font-size: 17px;
 }
 .event_data {
     width: 15%;
@@ -965,10 +967,10 @@ table#t01 tr:hover {
     .member_title_news {
        font-size: 1.7em;
    }    
-    .user_data {
+    /*.user_data {
         width: 47%;
         margin-left: 53%;
-    }
+    }*/
 }
 
 @media (max-width: 768px) {
