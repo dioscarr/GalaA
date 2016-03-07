@@ -291,7 +291,6 @@ img {
 .home_find_member {
     width: 100%;
     margin: 1% 0;
-    padding: 3%;
     font-size: 0.9em;
     text-transform: uppercase;
     background-color: #216093;
@@ -302,6 +301,8 @@ img {
     color: #95b3cc;
     display:block;
     position: relative;
+    height: 100%;
+    padding: 3%;
 }
 .caret {
     float: right;
@@ -312,7 +313,7 @@ img {
     transform: rotate(-90deg);
     position: absolute;
     top: 50%;
-    right: 0%;
+    right: 3%;
 }
 .home_find_member>a:hover {
     color: white;
@@ -854,11 +855,13 @@ table#t01 tr:hover {
     font-size: 1em;
     color: rgb(51, 122, 183);
 }
-
-
 /*end*/
 
+
 /* Member*/
+.member_list_content_global {
+    box-shadow: none;
+}
 .membershipForm {
     padding-bottom: 5%;
 }
@@ -1265,6 +1268,7 @@ table#t01 tr:hover {
     /*member*/
     .member_list_content_global {
         padding: 0;
+        
     }
     .mobile_display_block {
         display: block;
@@ -1328,6 +1332,7 @@ table#t01 tr:hover {
         width: 72%;
     }
     /*Member*/
+
     .bio_top_title {
         margin-top: 3%;
     }
