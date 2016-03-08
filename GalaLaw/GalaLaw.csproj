@@ -236,6 +236,7 @@
     <Compile Include="Controllers\MembershipController.cs" />
     <Compile Include="Controllers\NewsController.cs" />
     <Compile Include="Controllers\PublicationController.cs" />
+    <Compile Include="Controllers\SubscribeController.cs" />
     <Compile Include="Controllers\TermAndPrivacyController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -2508,6 +2509,7 @@
     <None Include="Scripts\jquery-2.0.0.intellisense.js" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Views\Subscribe\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
