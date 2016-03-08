@@ -64,8 +64,10 @@
                 <div class="events_table">
                     @foreach (Gazette article in @Model.GazetteArticles)
                     {
-                        <h4 class="gazette_country">@if (@article.Firm != null)
-                        { @article.Firm.Country}</h4>
+                        <h4 class="gazette_country">
+                            @if (@article.Firm != null)
+                        { @article.Firm.Country}
+                    </h4>
                         <p class="publication_padding"><span class="text_uppercase"><a href="~/Publication/GazetteArticle/@article.Id">@article.header</a></span></p>
                         <p>
                             @{var content = @Html.Raw(@article.Content); }
@@ -95,8 +97,8 @@
 </section>
 
 @section scripts{
-    
-<script src="~/Scripts/moment.min.js"></script>
+
+    <script src="~/Scripts/moment.min.js"></script>
     <script>
         debugger
 
@@ -104,5 +106,5 @@
         var day = moment('@Model.LastGazetteVolume.PublishedDate').format('MM.DD.YYYY');
         $('.GazetteDate').text(day);
     </script>
-    
-    }
+
+}
