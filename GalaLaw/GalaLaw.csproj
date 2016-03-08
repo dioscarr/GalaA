@@ -236,6 +236,7 @@
     <Compile Include="Controllers\MembershipController.cs" />
     <Compile Include="Controllers\NewsController.cs" />
     <Compile Include="Controllers\PublicationController.cs" />
+    <Compile Include="Controllers\SubscribeController.cs" />
     <Compile Include="Controllers\TermAndPrivacyController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -1087,6 +1088,7 @@
     <Content Include="Views\MembershipAssociate\MembershipAssociate.cshtml" />
     <Content Include="Views\MembershipAssociate\WelcomeMembershipAssociate.cshtml" />
     <Content Include="Views\Membership\Membership.cshtml" />
+    <Content Include="Views\Subscribe\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
