@@ -31,8 +31,8 @@
         <div class="row content_text">
             <div class="col-xs-8 content_global mobile_content_global">
                 <p> @Html.Raw(@Model.publication.Content)</p><br>
-                <a class="" href="#">Receive a copy</a>
-                <p>To receive a PDF copy of the books , please email Stacy Bess at <a href="#">@Model.publication.Email</a>.</p>
+                <span>Receive a copy</span>
+                <p>To receive a PDF copy of the books , please email Stacy Bess at <a href="mailto:@Model.publication.Email">@Model.publication.Email</a>.</p>
                 <div class="publication_member">
                     @foreach (var item in @Model.publicationbooks)
                     {
