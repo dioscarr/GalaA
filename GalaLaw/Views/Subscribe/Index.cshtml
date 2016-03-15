@@ -68,8 +68,9 @@
                             <span>GALA GAZETTE</span>
                         </div>
                         <div class="agreeofuseField inputSubscribeField">
-                            <input class="inputCheckboxes" type="checkbox" name="option1" value="a1">
-                            @*<span class="agreeofuse">I agree to the <a href="~/TermAndPrivacy/TermOfUse">Terms of Use</a>.</span>*@
+                            @*<input class="inputCheckboxes" type="checkbox" name="option1" value="a1">
+                            <span class="agreeofuse">I agree to the <a href="~/TermAndPrivacy/TermOfUse">Terms of Use</a>.</span>*@
+                            <div class="g-recaptcha" data-sitekey="6LdH6xoTAAAAAPsjdN2PZ5PSlpUfQqhxk7CXf3gN"></div>
                         </div>
                     <input type="submit" class="formSubscribeButtom" value="Sign Up">
 
@@ -87,3 +88,10 @@
     </div>
 
 </section>
+
+
+@section scripts{
+<script src='https://www.google.com/recaptcha/api.js'></script>
+}
+
+
