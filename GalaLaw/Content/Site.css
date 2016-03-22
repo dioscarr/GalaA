@@ -937,6 +937,9 @@ table#t01 tr:hover {
 .subscribe_content_global {
     box-shadow: none;
 }
+.agreeofuseField {
+    padding: 3% 0;
+}
 .inputSubscribeField .inputTypeField {
     width: 25%;
     padding: 1%;
