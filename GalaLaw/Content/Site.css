@@ -520,6 +520,8 @@ footer .footer_text_muted {
     display: table-cell;
     vertical-align: middle
  }
+
+
 /*mail styles end*/
 
 /*about*/
@@ -581,7 +583,7 @@ footer .footer_text_muted {
 }
 .about_member_person_info> h4 {
     font-size: .9em;
-    margin-top: 0;
+    margin-top: 5%;
 }
 .about_member_country {
     position: absolute;

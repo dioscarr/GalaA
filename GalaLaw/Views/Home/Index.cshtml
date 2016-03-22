@@ -205,6 +205,12 @@
 @section scripts{
 <script src="~/Scripts/knockout-3.4.0.js"></script>
     <script type="text/javascript">
+
+        // slider speed
+        $('#carousel-example-generic').carousel({
+            interval: 5000
+        });
+
     $(document).ready(function () {
         $('.content_text').css("height", ($(window).height() - $('#wrapper2').height()) + $('.content_text').height());
     });
