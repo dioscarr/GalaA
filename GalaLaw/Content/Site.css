@@ -1236,14 +1236,7 @@ table#t01 tr:hover {
     .member_title_news {
         font-size: 1.1em;
     }
-    .small_home_bg {
-        position: relative;
-    }
-    .small_home_bg_text{
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-    }
+
 }
 
 @media (min-width: 480px) {
@@ -1253,6 +1246,14 @@ table#t01 tr:hover {
 }
 
 @media (max-width: 480px) {
+    .small_home_bg {
+        position: relative;
+    }
+    .small_home_bg_text{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
     body::-webkit-scrollbar {
 	    width:0px;
     }
