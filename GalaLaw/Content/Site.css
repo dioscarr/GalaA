@@ -126,21 +126,25 @@ img {
 .user_data {
     background-color: #004379;
     padding: 0 1%;
-    width: auto;
+    max-width: 35%;
     float: right;
         overflow: hidden;
 }
 .user_icon, .user_login {
     padding: 0 0% 0;
+    display: inline;
 }
 .user_icon {
     border-right: 2px solid #326893;
+}
+.user_icon>a {
+    padding: 25%;
 }
 .user_login>h2 {
     color: white;
     text-transform: uppercase;
     font-size: 0.9em;
-    padding: 5% 0% 0;
+    padding: 5% 5% 0;
     font-weight: bold;
 }
 .search_block {
