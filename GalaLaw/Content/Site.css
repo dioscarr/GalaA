@@ -1246,6 +1246,9 @@ table#t01 tr:hover {
 }
 
 @media (max-width: 480px) {
+    .content {
+        padding: 0 15px;
+    }
     .small_home_bg {
         position: relative;
     }
