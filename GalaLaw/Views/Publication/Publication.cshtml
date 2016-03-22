@@ -71,7 +71,7 @@
                             @if (@article.Firm != null)
                         { @article.Firm.Country}
                     </h4>
-                        <p class="publication_padding"><span class="text_uppercase"><a href="~/Publication/GazetteArticle/@article.Id">@article.header</a></span></p>
+                        <p class="publication_padding"><span class=""><a href="~/Publication/GazetteArticle/@article.Id">@article.header</a></span></p>
                         <p>
                             @{var content = @Html.Raw(@article.Content); }
                             @if (@content != null) { }
