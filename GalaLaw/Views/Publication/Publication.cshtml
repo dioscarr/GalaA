@@ -55,16 +55,40 @@
                 <p>To receive a PDF copy of the books , please email Stacy Bess at <a href="mailto:@Model.publication.Email">@Model.publication.Email</a>.</p>
 
                 <br />
+
+
                 <div class="bio_top_title">
+                    <div class="pull-left col-md-12 left_no_padding">
+                        <h1 class="content_title_news"><span class="gazette_data text_uppercase "> </span> GALA GAZETTE</h1>
+                        <hr/>
+                    </div>
+
+                        @foreach (var item in @Model.LastGazetteVolumes)
+                        {
+                            <div class="pull-left">
+                                <a href="~/Publication/GazetteArchive?id=@item.Id"> <h1 class="content_title_news"><span class="gazette_data text_uppercase GazetteDate"> </span> GALA GAZETTE @item.GazetteVolume</h1></a>
+                               
+                                <br />
+                            </div>
+
+                        }
+
+                    </div>
+
+
+
+
+
+                @*<div class="bio_top_title">
                     <div class="pull-left">
                         <h1 class="content_title_news"><span class="gazette_data text_uppercase GazetteDate"> </span> GALA @Model.LastGazetteVolume.GazetteVolume</h1>
                     </div>
                     <div class="pull-right print_share">
                         <h4 class="events_archive text_uppercase"><a href="~/Publication/GazetteArchive/@Model.LastGazetteVolume.Id">< @Model.LastGazetteVolume.GazetteVolume></a></h4>
                     </div>
-                </div>
+                </div>*@
                 <hr>
-                <div class="events_table">
+                @*<div class="events_table">
                     @foreach (Gazette article in @Model.GazetteArticles)
                     {
                         <h4 class="gazette_country">
@@ -80,7 +104,7 @@
                         </p>
                         <br>
                                 }
-                </div>
+                </div>*@
             </div>
             <div class='col-xs-4 membership mobile_content_global'>
                 <div class="news_block events_block">
@@ -103,11 +127,11 @@
 
     <script src="~/Scripts/moment.min.js"></script>
     <script>
-        debugger
+       
 
 
-        var day = moment('@Model.LastGazetteVolume.PublishedDate').format('MM.DD.YYYY');
-        $('.GazetteDate').text(day);
+        @*var day = moment('@Model.LastGazetteVolume.PublishedDate').format('MM.DD.YYYY');
+        $('.GazetteDate').text(day);*@
     </script>
 
 }

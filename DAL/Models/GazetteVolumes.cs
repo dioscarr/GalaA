@@ -26,6 +26,7 @@ namespace DAL.Models
         public Nullable<System.DateTime> Created_ { get; set; }
         public System.DateTime Modified { get; set; }
         public bool isDeleted { get; set; }
+        public Nullable<int> Order { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Gazette> Gazette { get; set; }

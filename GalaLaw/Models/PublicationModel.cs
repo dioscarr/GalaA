@@ -15,7 +15,7 @@ namespace GalaLaw.Models
         public publicationBooks SinglepublicationBooks { get; set; }
         public Gazette GazetteArticle { get; set; }
         public List<Gazette> GazetteArticles { get; set; }
-        public GazetteVolumes LastGazetteVolume { get; set; }
+        public List<GazetteVolumes> LastGazetteVolumes { get; set; }
         public List<Gazette> Volumes { get; set; }
         public List<gazettelist> mylistofGazette { get; set; }
         public List<VolumesModel> mymodel { get; set; }
@@ -25,7 +25,7 @@ namespace GalaLaw.Models
             publicationbooks = ManagepublicationBooks.GetAllpublicationBooks().ToList();
             GazetteArticle = null;
             GazetteArticles = db.Gazette.ToList();
-            LastGazetteVolume = ManageGazetteVolumes.GetAllGazetteVolumes().OrderByDescending(c => c.PublishedDate).FirstOrDefault();
+            LastGazetteVolumes = ManageGazetteVolumes.GetAllGazetteVolumes().OrderByDescending(c => c.Order).ToList();
             //=====================================================================================
             mymodel = db.GazetteVolumes.OrderByDescending(c=>c.PublishedDate)
                 .Select(c => new VolumesModel
@@ -44,6 +44,26 @@ namespace GalaLaw.Models
                  .ToList();
 
             //=====================================================================================
+        }
+        internal void loadsinglevolume(int id) {
+            mymodel = db.GazetteVolumes.Where(c=>c.Id == id).OrderByDescending(c => c.PublishedDate)
+          .Select(c => new VolumesModel
+          {
+              id = c.Id,
+              name = c.GazetteVolume,
+              PublishedDate = c.PublishedDate.ToString(),
+              countries = c.Gazette
+                                                              .Where(x => x.GazetteVolumeID == c.Id)
+                                                              .Select(x => new Countries
+                                                              {
+                                                                  cname = x.Firm.Country,
+                                                                  Content = x.Content,
+                                                                  Header = x.header,
+                                                                  id = x.Id
+                                                              })
+                                                              .ToList()
+          })
+           .ToList();
         }
 
         public void publicationFirm(int? FirmID) {

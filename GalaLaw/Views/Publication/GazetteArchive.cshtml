@@ -35,9 +35,10 @@
                         <h1 class="content_title_news">GALA Gazette</h1>
                     </div>
                     <div class="pull-right print_share">
-                        <h4 class="events_archive text_uppercase"><button data-bind="click: next" class="btn btn-link " style="color:black; font-size:18px; font-weight:bolder;"><</button>
+                        <h4 class="events_archive text_uppercase">
+                            @*<button data-bind="click: next" class="btn btn-link " style="color:black; font-size:18px; font-weight:bolder;"><</button>*@
                          <span  data-bind="text: currentItem().name"></span> 
-                        <button  class="btn btn-link"  data-bind="click: prev" style="color:black; font-size:18px; font-weight:bolder;" >></button>
+                        @*<button  class="btn btn-link"  data-bind="click: prev" style="color:black; font-size:18px; font-weight:bolder;" >></button>*@
                         </h4>
                     </div>
                 </div>
@@ -134,19 +135,24 @@
                 }
 
                 if ('@ViewBag.Firm' != null)
-                {                    
-                    var link = '@Url.Action("GazetteVolumes", "Publication")?firmID=@ViewBag.firm';
-                }
-                else
                 {
                     var link = '@Url.Action("GazetteVolumes", "Publication")';
                 }
-               
+                else
+                {
 
 
+                    var link = '@Url.Action("GazetteVolumes", "Publication")';
+                }
+
+
+                debugger;
                 $.ajax({
                     type: "GET",
                     url: link,
+                    data: {firmID:'@ViewBag.firm', id:'@ViewBag.id'},
+                    //contentType: 'application/json; charset=utf-8',
+                    dataType: 'json',
                     success: function (data) {
                         //alert(JSON.stringify(data.Data));
 

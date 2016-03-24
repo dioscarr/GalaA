@@ -31,9 +31,9 @@ namespace DAL.Models
         public bool isDeleted { get; set; }
     
         public virtual Firm Firm { get; set; }
-        public virtual GazetteVolumes GazetteVolumes { get; set; }
         public virtual Team Team { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<GMLink> GMLink { get; set; }
+        public virtual GazetteVolumes GazetteVolumes { get; set; }
     }
 }

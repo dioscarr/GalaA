@@ -18,6 +18,7 @@ namespace GalaLaw.Controllers
         public ActionResult GazetteArchive(int? id, int? firmID)
         {
             ViewBag.Firm = firmID;
+            ViewBag.id = id;
             PublicationModel PM = new PublicationModel();
             if (firmID != null)
             {
@@ -39,12 +40,17 @@ namespace GalaLaw.Controllers
         }
         [HttpGet]
         [AllowAnonymous]
-        public JsonResult GazetteVolumes(int? firmID)
+        public JsonResult GazetteVolumes(int? firmID, int? id)
         {
             PublicationModel PM = new PublicationModel();
             if (firmID != null)
             {
                 PM.publicationFirm(firmID);
+                var mymodel1 = Json(PM.mymodel);
+                return new JsonResult() { Data = mymodel1, JsonRequestBehavior = JsonRequestBehavior.AllowGet };
+            }
+            else if(id!=null){
+                PM.loadsinglevolume((int)id);
                 var mymodel1 = Json(PM.mymodel);
                 return new JsonResult() { Data = mymodel1, JsonRequestBehavior = JsonRequestBehavior.AllowGet };
             }

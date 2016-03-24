@@ -17,7 +17,9 @@
 outline:1px solid red;
 }
 
-
+.left_no_padding {
+padding-left:0px!important;
+}
 .nopaddding {
     padding:0px !important;
 }
@@ -1426,7 +1428,16 @@ table#t01 tr:hover {
     .content_title_news {
         font-size: 1.5em;
     }
+    .user_data {
+        width:100%;
+        max-width: 100%;
+    }
+    .user_icon>a {
+        padding: 0;
+    }
 }
+
+
 
 
 @media print,

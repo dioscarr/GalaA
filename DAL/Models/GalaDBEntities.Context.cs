@@ -32,7 +32,6 @@ namespace DAL.Models
         public virtual DbSet<FCRelation> FCRelation { get; set; }
         public virtual DbSet<Firm> Firm { get; set; }
         public virtual DbSet<Gazette> Gazette { get; set; }
-        public virtual DbSet<GazetteVolumes> GazetteVolumes { get; set; }
         public virtual DbSet<GMLink> GMLink { get; set; }
         public virtual DbSet<Home> Home { get; set; }
         public virtual DbSet<Publication> Publication { get; set; }
@@ -43,5 +42,6 @@ namespace DAL.Models
         public virtual DbSet<AspNetRoles> AspNetRoles { get; set; }
         public virtual DbSet<AspNetUsers> AspNetUsers { get; set; }
         public virtual DbSet<PassRelation> PassRelation { get; set; }
+        public virtual DbSet<GazetteVolumes> GazetteVolumes { get; set; }
     }
 }

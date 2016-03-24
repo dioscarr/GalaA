@@ -12,7 +12,6 @@
         <EntityTypeShape EntityType="DB_97691_galadbModel.FCRelation" Width="1.5" PointX="6.25" PointY="9.875" />
         <EntityTypeShape EntityType="DB_97691_galadbModel.Firm" Width="1.5" PointX="2.375" PointY="9.5" />
         <EntityTypeShape EntityType="DB_97691_galadbModel.Gazette" Width="1.5" PointX="8.25" PointY="15.625" />
-        <EntityTypeShape EntityType="DB_97691_galadbModel.GazetteVolumes" Width="1.5" PointX="7" PointY="12" />
         <EntityTypeShape EntityType="DB_97691_galadbModel.GMLink" Width="1.5" PointX="10.5" PointY="19.375" />
         <EntityTypeShape EntityType="DB_97691_galadbModel.Home" Width="1.5" PointX="4.75" PointY="6.75" />
         <EntityTypeShape EntityType="DB_97691_galadbModel.Publication" Width="1.5" PointX="6.75" PointY="6.75" />
@@ -28,7 +27,6 @@
         <AssociationConnector Association="DB_97691_galadbModel.Firm_FCRelation" />
         <AssociationConnector Association="DB_97691_galadbModel.FK_Gazette_Firm" />
         <AssociationConnector Association="DB_97691_galadbModel.FK_Member_Firm" />
-        <AssociationConnector Association="DB_97691_galadbModel.FK_Gazette_GazetteVolumes" />
         <AssociationConnector Association="DB_97691_galadbModel.FK_Gazette_Team" />
         <AssociationConnector Association="DB_97691_galadbModel.Gazette_GMLink" />
         <AssociationConnector Association="DB_97691_galadbModel.Member_GMLink" />
@@ -38,6 +36,8 @@
         <EntityTypeShape EntityType="DB_97691_galadbModel.PassRelation" Width="1.5" PointX="5.625" PointY="24.25" />
         <AssociationConnector Association="DB_97691_galadbModel.FK_PassRelation_Team" />
         <AssociationConnector Association="DB_97691_galadbModel.AspNetUserRoles" />
+        <EntityTypeShape EntityType="DB_97691_galadbModel.GazetteVolumes" Width="1.5" PointX="5.375" PointY="1" />
+        <AssociationConnector Association="DB_97691_galadbModel.FK_Gazette_GazetteVolumes" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
