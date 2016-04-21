@@ -19,6 +19,7 @@ namespace GalaLaw.Controllers
         }
         public ActionResult NewsArchive(int? prevyear, int? nextyear, string type)
         {
+            ViewBag.topic = type;
             ViewBag.type = type;
             EventsModel EM = new EventsModel();
             if (prevyear != null)

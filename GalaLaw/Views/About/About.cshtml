@@ -37,7 +37,7 @@
                 <a class="about_view_member_list text_uppercase" href="~/members/MemberList">VIEW OUR MEMBER LISTING &nbsp;<img src="~/Images/about-arrow.png" /></a><br><br>
                 <span class="Executive_Committee">GALA's Executive Committee</span><br>
 
-                @foreach (var executive in @Model.executives)
+                @foreach (var executive in @Model.executives.OrderBy(c=>c.Order).ToList())
                 {
 
                     <div class="col-xs-4 about_member_col">

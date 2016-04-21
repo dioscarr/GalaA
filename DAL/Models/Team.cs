@@ -17,11 +17,11 @@ namespace DAL.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Team()
         {
+            this.PassRelation = new HashSet<PassRelation>();
             this.CMFRelation = new HashSet<CMFRelation>();
             this.Events = new HashSet<Events>();
             this.Gazette = new HashSet<Gazette>();
             this.GMLink = new HashSet<GMLink>();
-            this.PassRelation = new HashSet<PassRelation>();
         }
     
         public int Id { get; set; }
@@ -29,6 +29,7 @@ namespace DAL.Models
         public string FName { get; set; }
         public string LName { get; set; }
         public string MInitial { get; set; }
+        public string Password { get; set; }
         public string Picture { get; set; }
         public string BIO { get; set; }
         public string Title { get; set; }
@@ -39,9 +40,10 @@ namespace DAL.Models
         public System.DateTime Created { get; set; }
         public System.DateTime Modified { get; set; }
         public bool isDeleted { get; set; }
-        public string Password { get; set; }
-        public string order { get; set; }
+        public Nullable<int> order { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PassRelation> PassRelation { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CMFRelation> CMFRelation { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
@@ -51,7 +53,5 @@ namespace DAL.Models
         public virtual ICollection<Gazette> Gazette { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<GMLink> GMLink { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PassRelation> PassRelation { get; set; }
     }
 }

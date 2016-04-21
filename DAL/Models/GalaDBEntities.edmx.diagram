@@ -17,27 +17,27 @@
         <EntityTypeShape EntityType="DB_97691_galadbModel.Publication" Width="1.5" PointX="6.75" PointY="6.75" />
         <EntityTypeShape EntityType="DB_97691_galadbModel.publicationBooks" Width="1.5" PointX="8.75" PointY="6.75" />
         <EntityTypeShape EntityType="DB_97691_galadbModel.Slider" Width="1.5" PointX="10.75" PointY="6.875" />
-        <EntityTypeShape EntityType="DB_97691_galadbModel.Team" Width="1.5" PointX="3" PointY="20.75" />
         <AssociationConnector Association="DB_97691_galadbModel.FK_CMFRelation_Country" />
         <AssociationConnector Association="DB_97691_galadbModel.FK_CMFRelation_Firm" />
-        <AssociationConnector Association="DB_97691_galadbModel.FK_CMFRelation_Member" />
         <AssociationConnector Association="DB_97691_galadbModel.Country_FCRelation" />
         <AssociationConnector Association="DB_97691_galadbModel.FK_Events_Firm1" />
-        <AssociationConnector Association="DB_97691_galadbModel.FK_Events_Member" />
         <AssociationConnector Association="DB_97691_galadbModel.Firm_FCRelation" />
         <AssociationConnector Association="DB_97691_galadbModel.FK_Gazette_Firm" />
-        <AssociationConnector Association="DB_97691_galadbModel.FK_Member_Firm" />
-        <AssociationConnector Association="DB_97691_galadbModel.FK_Gazette_Team" />
         <AssociationConnector Association="DB_97691_galadbModel.Gazette_GMLink" />
-        <AssociationConnector Association="DB_97691_galadbModel.Member_GMLink" />
         <EntityTypeShape EntityType="DB_97691_galadbModel.Contact" Width="1.5" PointX="10.75" PointY="10.625" />
         <EntityTypeShape EntityType="DB_97691_galadbModel.AspNetRoles" Width="1.5" PointX="0.75" PointY="2" />
         <EntityTypeShape EntityType="DB_97691_galadbModel.AspNetUsers" Width="1.5" PointX="3" PointY="1" />
         <EntityTypeShape EntityType="DB_97691_galadbModel.PassRelation" Width="1.5" PointX="5.625" PointY="24.25" />
-        <AssociationConnector Association="DB_97691_galadbModel.FK_PassRelation_Team" />
         <AssociationConnector Association="DB_97691_galadbModel.AspNetUserRoles" />
         <EntityTypeShape EntityType="DB_97691_galadbModel.GazetteVolumes" Width="1.5" PointX="5.375" PointY="1" />
         <AssociationConnector Association="DB_97691_galadbModel.FK_Gazette_GazetteVolumes" />
+        <EntityTypeShape EntityType="DB_97691_galadbModel.Team" Width="1.5" PointX="4.625" PointY="27.5" />
+        <AssociationConnector Association="DB_97691_galadbModel.FK_PassRelation_Team" />
+        <AssociationConnector Association="DB_97691_galadbModel.FK_CMFRelation_Member" />
+        <AssociationConnector Association="DB_97691_galadbModel.FK_Events_Member" />
+        <AssociationConnector Association="DB_97691_galadbModel.FK_Member_Firm" />
+        <AssociationConnector Association="DB_97691_galadbModel.FK_Gazette_Team" />
+        <AssociationConnector Association="DB_97691_galadbModel.Member_GMLink" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

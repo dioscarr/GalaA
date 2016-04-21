@@ -117,7 +117,7 @@
                                                                 <div class="panel-heading">IF the country is no present please add it from the list</div>
                                                                 <div class="panel-body">
                                                                     1) Select an existing Country @Html.DropDownListFor(model => @model.Fields.CountryID, (IEnumerable<SelectListItem>)ViewBag.Countries, "Assign a country to this firm", new { @class = "form-control Countryid ", id = "Countryid" })
-                                                                    <i> the Country is not on the list please @Html.ActionLink("Add New Country", "Insert", "AdminMember") to the list.</i>
+                                                                    <i> the Country is not on the list please @Html.ActionLink("Add New Country", "Insert", "CountryFirm") to the list.</i>
                                                                     <br />
                                                                     <br />
                                                                     2) Click save to add the selected country as another Location

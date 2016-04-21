@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using GalaLaw.Areas.Admin.Models;
 using DAL.Models;
 using BLL;
+using System.IO;
 
 namespace GalaLaw.Areas.Admin.Controllers
 {
@@ -39,10 +40,10 @@ namespace GalaLaw.Areas.Admin.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [ValidateInput(false)]
-        public ActionResult Insert(Country model)
+        public ActionResult Insert(Country model, HttpPostedFileBase ImageUpload )
         {
-
-            CountryModel CM = new CountryModel();
+            CountryModel CM = new CountryModel();           
+                model.Flag = ImageUload(ImageUpload, "~/Images/flags"); 
 
             CM.Insert(model);
             return RedirectToAction("Firms");
@@ -119,5 +120,45 @@ namespace GalaLaw.Areas.Admin.Controllers
             model.AddFCRelation(model);
             return RedirectToAction("Firms");
         }
+
+
+        //upload image
+        public string ImageUload(HttpPostedFileBase File, string url)
+        {
+            var validImageTypes = new string[]
+            {
+                "image/gif",
+                "image/jpeg",
+                "image/jpg",
+                "image/pjpeg",
+                "image/png"
+            };
+
+            if (File == null || File.ContentLength == 0)
+            {
+                ModelState.AddModelError("ImageUpload", "This field is required");
+            }
+            else if (!validImageTypes.Contains(File.ContentType))
+            {
+                ModelState.AddModelError("ImageUpload", "Please choose either a GIF, JPG or PNG image.");
+            }
+
+            if (ModelState.IsValid)
+            {
+                if (File != null && File.ContentLength > 0)
+                {
+                    var uploadDir = url;
+                    var imagePath = Path.Combine(Server.MapPath(uploadDir), File.FileName);
+                    var imageUrl = Path.Combine(uploadDir, File.FileName);
+                    File.SaveAs(imagePath);
+                    return File.FileName;
+                }
+            }
+            return "noimg.jpg";
+
+
+
+        }
+
     }
 }

@@ -37,11 +37,11 @@ namespace DAL.Models
         public virtual DbSet<Publication> Publication { get; set; }
         public virtual DbSet<publicationBooks> publicationBooks { get; set; }
         public virtual DbSet<Slider> Slider { get; set; }
-        public virtual DbSet<Team> Team { get; set; }
         public virtual DbSet<Contact> Contact { get; set; }
         public virtual DbSet<AspNetRoles> AspNetRoles { get; set; }
         public virtual DbSet<AspNetUsers> AspNetUsers { get; set; }
         public virtual DbSet<PassRelation> PassRelation { get; set; }
         public virtual DbSet<GazetteVolumes> GazetteVolumes { get; set; }
+        public virtual DbSet<Team> Team { get; set; }
     }
 }
